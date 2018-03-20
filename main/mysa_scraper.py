@@ -33,6 +33,7 @@ class Scraper:
 	
 	def get_classes_info(self, year):
 		''''
+		Returns class info for both semesters
 		
 		'''
 		semesters_info = self.get_semesters_info(year)
@@ -51,7 +52,7 @@ class Scraper:
 				"schoolYearLabel": year,		# School year (format: "2017-2018")
 				"memberLevel": 3,				# No idea what this does
 				"persona": 2,					# Same here
-				"durationList": _id,	# Semester ID (must get this from different request)
+				"durationList": _id,			# Semester ID (must get this from different request)
 				"markingPeriodId": ''			# No idea
 			}
 			
@@ -68,6 +69,7 @@ class Scraper:
 	def get_semesters_info(self, year):
 		'''
 		Returns list of dicts containing semester info. 
+		
 		'''
 		term_info_url = "https://gosaints.myschoolapp.com/api/DataDirect/StudentGroupTermList/"
 		term_info_payload = {
@@ -86,6 +88,10 @@ class Scraper:
 		return semesters_info
 		
 	def get_quarters_info(self, semester_id):
+		'''
+		Returns dict of info for each quarter within semesters
+		
+		'''
 		
 		payload = {
 			'userId': self.user_id,
@@ -106,9 +112,14 @@ class Scraper:
 		
 		
 	def get_quarter_grades(self, year):
+		'''
+		Returns dict of quarter to classes info
+		
+		'''
 		
 		classes_info_url = "https://gosaints.myschoolapp.com/api/datadirect/ParentStudentUserAcademicGroupsGet"
 		quarter_grades_dict = {}
+		
 		for semester in self.get_semesters_info(year):
 			semester_id = semester['DurationId']
 			
@@ -151,6 +162,7 @@ class Scraper:
 
 				if match and match.group(1).strip() != 'Study Hall':
 					pretty_class_name = match.group(1).strip()
+					
 					if '.' in pretty_class_name:
 						pretty_class_name = pretty_class_name.replace('.', '')
 
