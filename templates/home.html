@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1 id='title'>My SA Grade Calculator</h1>
+<div id='sub-pg'>
+	<p id='subtitle'>
+	Welcome to MySaGrade Calculator. This website was made for students of St. Andrew's but 
+	is in no way affiliated with the school. Please know you are entering your password at
+	your own risk.
+	</p>
+</div>
+<div id="login-box">
+	<form method="POST" id="main-form" autocomplete="hfdghdfg">
+		<input autocomplete="gdfsgsfd" name="hidden" type="text" style="display:none;">
+		{% csrf_token %}
+		<label for="username">Username: </label>
+		<input type="text" id="username" name="username">
+		<label for="password">Password: </label>
+		<input type="password" id="password" name="password">
+		<input type="submit" value="Submit" />
+		<h4 id='login-status'></h4>
+		
+	</form>
+</div>
+
+<div id="grade-disp-box" hidden>
+	<div class="btn-group" id="quarter-selectors">
+		<a class='btn btn-primary btn-sm notActive' id='q1-selector' data-toggle='quarter-input' data-title='Q1'>Q1</a>
+		<a class='btn btn-primary btn-sm notActive' id='q2-selector' data-toggle='quarter-input' data-title='Q2'>Q2</a>
+		<a class='btn btn-primary btn-sm notActive' id='q3-selector' data-toggle='quarter-input' data-title='Q3'>Q3</a>
+		<a class='btn btn-primary btn-sm active' id='q4-selector' data-toggle='quarter-input' data-title='Q4'>Q4</a>
+	</div>
+	<input class='' type='hidden' value='None' name='quarter-input' id='quarter-input'>
+	<div id="grades-disp">
+	</div>
+	<button onclick="promptForNewClass()">Add a Class</button>
+	<button onclick="restoreClasses()">Restore Classes</button>
+	<div id="add-class">
+	</div>
+	<p id="gpa-display"></p>
+	
+</div>
+
+{% endblock content %}

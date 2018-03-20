@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+
+html {
+	background-color: #cf6766;
+}
+* {
+	position: relative;
+}
+
+body {
+	background-color: inherit;
+	line-height: inherit;
+	
+}
+h1 {
+	margin-top: 2rem;
+}
+
+#login-box {
+
+	margin: 5% auto 15% auto;
+/*	border: 1px solid #888;*/
+	width: 40%;
+	height: 5rem;
+	
+}
+
+#main-form {
+	text-align: left;
+}
+
+input[name='username'], input[name='password'] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	
+}
+
+label[for='username'], label[for='password'] {
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	color: white;
+/*	background-color: #8eaebd;*/
+}
+
+#title {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-align: center;
+	font-weight: bolder;
+	font-size: 3.5rem;
+	color: white;
+	background-color: #30415d;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+	
+}
+
+#subtitle {
+	margin-top: 0px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+/*	background-color: #ff3b3f;*/
+	color: white;
+}
+#sub-pg {
+	width: 60%;
+	margin: 0 auto;
+}
+
+input[type='submit'] {
+	background-color: #30415d;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+button {
+	background-color: #30415d;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+
+
+#grade-disp-box {
+	padding-top: 10rem;
+	margin: 0 auto;
+	width: 75%;
+	padding-bottom: 10rem;
+	font-size: 17px;
+}
+
+.remove-btn {
+/*	font-family: 'Lato', sans-serif;*/
+/*	background-color: #031424;*/
+	text-align: center;
+	cursor: pointer;
+	color: white;
+	vertical-align: bottom;
+	margin-top: 5px;
+	
+/*	border-top-right-radius: 10%;*/
+/*	display: inline-block;*/
+/*	border-radius: 50%;*/
+/*	width: 40px;*/
+/*	height: 40px;*/
+	
+}
+table, td, th {    
+/*	border: 1px solid #ddd;*/
+	text-align: left;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+	background-color: #30415d;
+	color: white;
+
+/*	border-radius: 10px;*/
+	border-spacing: 2px;
+}
+
+th, td {
+	padding: 10px;
+}
+
+table input {
+	width: 80px;
+	color: black;
+	text-align: center;
+	font-size: 14px;
+}
+
+#radioBtn .notActive{
+	color: white;
+	background-color: #30415d;
+}
+#radioBtn .active{
+	color: #30415d;
+	background-color: white;
+	border-color: white;
+	border-width: 1px;
+	box-shadow: inherit;
+	outline: inherit;
+}
+
+.btn-primary {
+	background-color: #30415d;
+	border-color: white;
+}
+.btn-primary:hover {
+	background-color: inherit;
+	border-color: inherit;
+}
+.class-name {
+	padding-left: 1rem;
+}
+
+#grades-disp {
+	margin: 0 auto;
+	background-color: #30415d;
+	padding: 1.5rem;
+	border-radius: 10px;
+}
+#gpa-display {
+	color: white;
+	font-size: 50px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 2rem;
+	background-color: #30415d;
+	width: 50%;
+	
+}
+#add-class {
+	color: white;
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	padding-top: 1.5rem;
+}
+#add-class input {
+	margin-left: 5px;
+	margin-top: 5px;
+	
+}
+#add-class button {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	padding-right: 5px
+}
+#login-status {
+	padding-left: 4rem;
+	padding-top: 1rem;
+	color: white;
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	width: 80%;
+	font-size: 17px;
+}
+html {
+	height: 100%;
+	overflow:auto;
+}
+body {
+	height: 100%;
+}
+/*#semester-selectors {*/
+/*	*/
+/*}*/
+#quarter-selectors .active {
+	background-color: white;
+	border-color: white;
+	color: #30415d;
+}
+#quarter-selectors .notActive {
+	background: #30415d;
+	border-color: white;
+	color: white;
+}
+#quarter-selectors {
+	background: white;
+}
+#quarter-selectors {
+	border-radius: 10px;
+}
