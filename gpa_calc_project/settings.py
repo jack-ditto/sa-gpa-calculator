@@ -25,6 +25,8 @@ SECRET_KEY = 'w@omj+&822rox9cb0vf)!r3bz37q2s2cq02$#0ef_cs1*w_$2s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Uncomment this to force ssl 
+#SECURE_SSL_REDIRECT = True
 ALLOWED_HOSTS = ['http://jackditto.pythonanywhere.com/', '127.0.0.1']
 
 
