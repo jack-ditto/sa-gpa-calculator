@@ -103,11 +103,10 @@ function calculateGpa() {
 	}
 	
 	// divides raw GPA by number of classes and rounds to first 2 digits
-	gpa = (grades_sum / entered_classes).toFixed(2);
-	
+	gpa = (Math.round( (grades_sum / entered_classes) * 10 ) / 10).toFixed(1);
 	// depending on user input, the GPA would not be able to be calculated and should be 0
-	if(gpa == NaN || gpa == Infinity || gpa == 'NaN' || gpa == 'Infinity') {
-		gpa = 0.0;
+	if(gpa == NaN || gpa == Infinity || gpa == 'NaN' || gpa == 'Infinity' || !gpa) {
+		gpa = "0.0";
 	}
 	
 	// Actually changing HTML on page to display GPA
